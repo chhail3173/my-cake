@@ -1,0 +1,25 @@
+<div class="myCard">
+    <div class="card" *ngFor="let value of card let i = index">
+      <div class="cardImg">
+        <i class="fas fa-egg vag" *ngIf = "value.eggLess"></i>
+        <i class="fas fa-egg nonvag" *ngIf = "!value.eggLess"></i>
+      <img class="card-img-top"  src="{{ value.image }}" alt="Card image cap" />
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{ value.name }}</p>
+        <p class="card-text">{{ value.price}}</p>
+        <p class="card-text">{{ value.weight}}</p>
+        <button (click) = "adminID(i)" type="button" class="btn btn-outline-dark editBtn"><i class="fas fa-edit"></i></button>
+      
+      </div> 
+    </div>
+  </div>
+  
+  <div class="my-overlay" *ngIf="showOverlay">
+    <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+  </div>
+
+
+ 
+  
+  

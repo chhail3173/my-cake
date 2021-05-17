@@ -1,0 +1,47 @@
+.navBg {
+    z-index: 10;
+}
+.navbar {
+    padding: 10px;
+}
+
+.navForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.navForm img {
+    width: 50px;
+    height: 35px;
+ 
+
+}
+
+.navForm a {
+    font-family: 'Ubuntu', sans-serif;
+    height: 35px;
+   
+
+}
+.navForm input {
+    margin: 5px;
+    height: 35px;
+}
+.navForm button {
+    margin: 5px;
+    height: 35px;
+
+}
+.navBtn button {
+    margin: 5px;
+}
+.nav-item {
+    margin: 5px;
+}
+

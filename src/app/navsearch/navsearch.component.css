@@ -1,0 +1,125 @@
+.myCard {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px;
+    margin-top: 100px;
+}
+
+.emptySearch {
+    width: 80vw;
+    height: 80vh;
+    margin-top: 5%;
+    text-align: center;
+    margin-left: 5%;
+}
+.emptySearch img {
+    width: 50vw;
+    height: 70vh;
+}
+
+.card {
+    margin: 10px;
+}
+.card img {
+    height: 130px;
+   
+}
+ 
+ .card-body {
+  background-color: #eeeeee;
+
+} 
+.search {
+    margin: 10px;
+}
+.search input[type = "text"] {
+    margin: 5px;
+    padding: 4px;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    border: none;
+
+}
+.search button {
+    margin: 5px;
+    padding: 4px;
+    border: none;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    border-radius: 4px;
+    outline: 0;
+}
+.search button:hover {
+    transform: rotate(360deg);
+   transition: all 1s
+    
+}
+.search button:active {
+    transform: rotate(360deg);
+    background: #e4e6e4cc;
+    opacity: 0;
+    transition: all 0.5s
+    
+}
+
+.active img {
+    height: 500px;
+}
+
+/* filter */
+.filterContainer {
+    display: flex;
+    justify-content: center;
+}
+.filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    background-color: rgba(233, 233, 233, 0.801);
+    border-radius: 4px;
+    width: 40vw;
+}
+
+.filter input {
+    width: 10vw;
+    margin: 10px;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+@media(max-width:566px){
+
+    .myCard {
+        display: flex;
+        justify-content:center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 30px;
+        margin-top: 100px;
+    }
+    .filter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px;
+        box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+        z-index: 10;
+        background-color: rgba(233, 233, 233, 0.801);
+        border-radius: 4px;
+        width: 40vw;
+    }
+    .filter input {
+        margin: 10px;
+        box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        width: 30vw;
+    }
+
+}

@@ -1,0 +1,122 @@
+.myCard {
+     box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    background-color: rgba(233, 233, 233, 0.801);
+    border-radius: 4px;
+    width: 80vw;
+    height: 80vh; 
+    margin: 20px;
+
+}
+
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.card-body {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+img {
+    width: 50%;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    padding: 2px;
+
+}
+.cartImg {
+    width: 30px;
+    height: 30px;
+}
+
+span {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+
+}
+i {
+    margin: 5px ;
+}
+
+.cartBtn button {
+    margin: 10px;
+}
+
+.imgBtn {
+    border: none;
+    margin: 10px;
+    text-align: right;
+  
+}
+
+@media(max-width:650px){
+    .myCard {
+        box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+       background-color: rgba(233, 233, 233, 0.801);
+       border-radius: 4px;
+       /* width: 95vw;
+       height: 80vh;  */
+       margin: 30px;
+   
+   }
+    .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        /* width: 50%;
+        height: 50%; */
+        /* padding: 10px;
+        margin: 30px; */
+    }
+    .card-body {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10PX;
+    }
+    img {
+        width: 50%;
+        box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+        padding: 2px;
+    
+    }
+    .cartImg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    span {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 12px;
+    
+    }
+    i {
+        margin: 5px ;
+    }
+    
+    .cartBtn button {
+        margin: 5px;
+    }
+    
+    .imgBtn {
+        border: none;
+        margin: 5px;
+        text-align: right;
+      
+    }
+    
+      
+}
+

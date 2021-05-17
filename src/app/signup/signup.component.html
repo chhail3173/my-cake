@@ -1,0 +1,28 @@
+<div class="loginForm">
+    <form action="#" >
+        <div class="form-floating mb-3 emailDiv">
+            <input [(ngModel)]="user.name" name="name" type="name" class="form-control"  placeholder="name@example.com">
+            <label for="floatingInput">Name</label>
+          </div>
+          <div class="form-floating mb-3 emailDiv">
+            <input [(ngModel)]="user.email" name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating passDiv">
+            <input [(ngModel)]="user.password" name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+
+        <div class="submit">
+        <input type="submit" class="btn btn-dark" (click) = "register()"  value="Signup">
+        <!-- <a href="#">Forget password</a> -->
+        </div>
+        <!-- <div class="newUser">
+            <p>New User?</p>
+            <a href="#">Signup here</a>
+            </div> -->
+    </form>
+
+</div>
+
+

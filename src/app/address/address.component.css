@@ -1,0 +1,55 @@
+.checkout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e9ecefaf;
+    /* width: 100vw; */
+    padding: 10px;
+    margin: 30px;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    border-radius: 4px;
+}
+
+.checkoutHeader {
+    background-color: #6c757d;
+    height: 20%;
+    padding: 10px;
+    border-radius: 4px;
+}
+.checkoutHeader h3 {
+    text-align: end;
+    color: white;
+
+}
+
+.checkout button {
+    width: 10%;
+}
+
+
+
+.loading img {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.my-overlay {
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 10000 !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    background-color: rgba(0,0,0,0.9) !important;
+    cursor: pointer !important;
+    visibility: visible !important;
+    transition: visibility 0s, opacity 0.4s linear !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: wait !important;
+}
+.my-overlay i.fa.fa-spinner.fa-spin, .spinner-big {
+    font-size: 100px !important;
+}

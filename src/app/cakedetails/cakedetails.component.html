@@ -1,0 +1,19 @@
+<div class="myCard">
+    <div  class="card">
+      <img class="card-img-top" src="{{ cakedetails.image }}" alt="Card image cap"/>
+      <div class="card-body">
+        <h1 class="card-text">{{ cakedetails.name }}</h1>
+        <p class="card-text"><span>{{ cakedetails.ratings }}</span> ⭐⭐🌟</p>
+        <p class="card-text">{{ cakedetails.reviews }} reviews</p>
+        <p class="card-text">{{ cakedetails.description }}</p>
+        <h4 class="card-text">CURRENT PRICE <i class="far fa-arrow-alt-circle-right"></i> <span>{{ cakedetails.price}}</span> </h4>
+        <h6 class="card-text">WEIGHT <i class="far fa-arrow-alt-circle-right"></i><span>{{ cakedetails.weight}}</span> </h6>
+        <h4 class="card-text">FLAVOUR <i class="far fa-arrow-alt-circle-right"></i><span>{{ cakedetails.flavour}}</span> </h4>
+        <h6 class="card-text">TYPE <i class="far fa-arrow-alt-circle-right"></i><span class="cartImg">{{ cakedetails.type}}</span> </h6>
+        <div class="cartBtn">
+          <button (click) = "cartItem()" type="button" class="btn btn-outline-warning"><i class="fas fa-cart-plus"></i> ADD TO CART</button>
+          <button type="button" class="btn btn-outline-success"><i class="fas fa-money-check-alt"></i> BUY</button>
+        </div>
+      </div> 
+    </div>
+  </div>

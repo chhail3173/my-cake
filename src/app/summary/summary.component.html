@@ -1,0 +1,14 @@
+<div class="container">
+    <div  class="card" *ngFor = "let value of cartItem let i = index">
+        <img class="" src="{{ value.image }}" alt="Card image cap"/>
+    
+          <p class="card-text">{{ value.name }}</p>
+          <p class="card-text">{{ value.price}}</p>
+          <p class="card-text">{{ value.weight}}</p>
+          <input type="number" value="{{ value.quantity}}">
+          <!-- <p class="card-text">{{ value.quantity}}</p> -->
+      </div>
+    <button (click) = "confirm()" class="btn btn-primary">Confirm</button> 
+
+</div>
+

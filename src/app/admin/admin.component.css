@@ -1,0 +1,144 @@
+
+.myCard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 20px;
+}
+.card img {
+    height: 150px;
+}
+ 
+ .card-body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  background-color: #eeeeee;
+
+} 
+.cardImg {
+    display: flex;
+    flex-direction: column;
+}
+img{
+    width: 100px;
+    height: 50px;
+}
+
+.vag {
+    background-color: green;
+    color: rgba(255, 0, 0, 0.822);
+    padding: 5px;
+    width: 30px;
+    position: absolute;
+
+  
+}
+.nonvag {
+    color: rgba(248, 1, 1, 0.829);
+    padding: 5px;
+    width: 30px;
+    position: absolute;
+
+}
+.search {
+    margin: 10px;
+}
+.search input[type = "text"] {
+    margin: 5px;
+    padding: 4px;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    border: none;
+
+}
+.search button {
+    margin: 5px;
+    padding: 4px;
+    border: none;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    border-radius: 4px;
+    outline: 0;
+}
+.search button:hover {
+    transform: rotate(360deg);
+   transition: all 1s
+    
+}
+.search button:active {
+    transform: rotate(360deg);
+    background: #e4e6e4cc;
+    opacity: 0;
+    transition: all 0.5s
+    
+}
+
+.active img {
+    height: 500px;
+}
+
+.my-overlay {
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 10000 !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    background-color: rgba(0,0,0,0.9) !important;
+    cursor: pointer !important;
+    visibility: visible !important;
+    transition: visibility 0s, opacity 0.4s linear !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: wait !important;
+}
+.my-overlay i.fa.fa-spinner.fa-spin, .spinner-big {
+    font-size: 100px !important;
+}
+
+.editBtn {
+    width: 40px;
+    /* height: 30px; */
+}
+
+@media(max-width:480px){
+    
+.myCard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+.card img {
+    height: 150px;
+}
+ 
+ .card-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  background-color: #eeeeee;
+
+} 
+
+img{
+    width: 100%;
+}
+
+}

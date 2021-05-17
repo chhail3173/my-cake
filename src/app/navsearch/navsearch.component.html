@@ -1,0 +1,29 @@
+<div class="filterContainer">
+  <div class="filter">
+ 
+      <input type="number" name="min" [(ngModel)] = 'min'
+      placeholder="Min Price">
+     <input type="number" name="max" [(ngModel)] = 'max'
+      placeholder="Max Price">
+     <input type="submit" class="btn btn-info" value="SORT" (click) = "filter()">
+    </div>
+</div>
+
+
+
+  <div class="emptySearch" *ngIf = "searchkey.length === 0">
+    <img src="http://www.sitesbay.com/files/404.gif" alt="">
+  </div>
+  <div class="myCard" *ngIf = "searchkey.length !== 0">
+    <div (click) = "send(i)" appItemstyle class="card" style="width: 14rem;" *ngFor="let value of searchkey let i = index">
+      <img class="card-img-top" src="{{ value.image }}" alt="Card image cap" />
+      <div class="card-body">
+        <p class="card-text">{{ value.name }}</p>
+        <p class="card-text">{{ value.price}}</p>
+        <p class="card-text">{{ value.weight}}</p>
+      </div> 
+    </div>
+  </div>
+
+  
+

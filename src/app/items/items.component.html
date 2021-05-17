@@ -1,0 +1,46 @@
+<!-- <app-slider></app-slider>
+<app-search></app-search> -->
+
+<div class="sortDiv"> <button (click) = "sortLowToHigh()" type="button" class="btn btn-secondary"><span>Low To High</span><i class="fas fa-sort-amount-up-alt"></i></button>
+  <button (click) = "sortHighToLow()" type="button" class="btn btn-secondary"><span>High To Low</span><i class="fas fa-sort-amount-up"></i></button></div>
+
+<div class="myCard">
+  <div (click) = "sendID(i)" appItemstyle class="card" style="width: 12rem; height: 18rem;" *ngFor="let value of card let i = index">
+    <div class="cardImg">
+      <i class="fas fa-egg vag" *ngIf = "value.eggless"></i>
+      <i class="fas fa-egg nonvag" *ngIf = "!value.eggless"></i>
+      <!-- <button type="button" class="btn btn-warning vag" ></button>
+    <button type="button" class="btn btn-warning nonvag" ><i class="fas fa-egg"></i></button> -->
+     
+    <img class="card-img-top"  src="{{ value.image }}" alt="Card image cap" />
+    </div>
+
+    
+    <div class="card-body">
+      <p class="card-text">{{ value.name }}</p>
+      <p class="card-text">{{ value.price}}</p>
+      <p class="card-text">{{ value.weight}}</p>
+    
+    </div> 
+  </div>
+
+</div>
+<!-- <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"
+    ><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"
+    ><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav> -->
+
+ 
+<div class="my-overlay" *ngIf="showOverlay">
+  <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+</div> 
+
+
+

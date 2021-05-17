@@ -1,0 +1,75 @@
+<div class="editForm">
+    <div class="form-floating nameDiv">
+        <input [(ngModel)]="editDetails.name" name="name" type="text" class="form-control" id="floatingPassword" placeholder="Name">
+        <label for="floatingPassword">NAME</label>
+      </div>
+
+      <div class="form-floating priceDiv">
+        <input [(ngModel)]="editDetails.price" name="price" type="number" class="form-control" id="floatingPassword" placeholder="Name">
+        <label for="floatingPassword">PRICE</label>
+      </div>
+
+      <div class="form-floating weightDiv">
+        <input [(ngModel)]="editDetails.weight" name="weight" type="text" class="form-control" id="floatingPassword" placeholder="Name">
+        <label for="floatingPassword">WEIGHT</label>
+      </div>
+
+      <div class="form-floating weightDiv">
+        <input [(ngModel)]="editDetails.eggless" name="eggless" type="text" class="form-control" id="floatingPassword" placeholder="Name">
+        <label for="floatingPassword">EGGLESS</label>
+      </div>
+
+      <div class="form-floating weightDiv">
+        <input [(ngModel)]="editDetails.flavour" name="flavour" type="text" class="form-control" id="floatingPassword" placeholder="Name">
+        <label for="floatingPassword">FLAVOUR</label>
+      </div>
+
+      <div class="form-floating weightDiv">
+        <input [(ngModel)]="editDetails.type" name="type" type="text" class="form-control" id="floatingPassword" placeholder="Name">
+        <label for="floatingPassword">TYPE</label>
+      </div>
+
+      <div class = "ingDiv">
+        <div class="form-floating deleteDiv" *ngFor = "let value of editDetails.ingredients; let i = index">
+          <div class="form-floating ">
+            <input [(ngModel)]="editDetails.ingredients[i]" name="{{ingredients[i]}}{{i}}" type="text" class="form-control" id="{{ingredients[i]}}{{i}}" placeholder="Name">
+            <label for="{{ingredients[i]}}{{i}}">INGREDIENTS</label>
+          </div>
+        
+          <button (click) = "deleteIng(i)" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>
+        </div>
+        <button (click) = "addIng()" class="btn btn-dark"><i class="fas fa-plus-square"></i></button>
+      </div>
+
+      
+      
+
+      <div class="form-floating weightDiv">
+        <input [(ngModel)]="editDetails.description" name="description" type="text" class="form-control" id="floatingPassword" placeholder="Name">
+        <label for="floatingPassword">DESCRIPTION</label>
+      </div>
+
+      <div class="imageDiv">
+        <img src="" [(ngModel)]="editDetails.image" alt="">
+      </div>
+
+
+      
+      <span class="uploadImg"><img [src]="editDetails.image" alt=""></span>
+      <div class="input-group">
+        
+        <input type="file" type="file" name="file" [(ngModel)] = 'file'   class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+
+        <button (click)="importFile($event)" class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">UPLOAD</button>
+      </div>
+
+   
+
+      <div class="successDiv">
+        <button type="button" class="btn btn-outline-success">SAVE</button>
+      </div>
+  </div>
+
+  <div class="my-overlay" *ngIf="showOverlay">
+    <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+  </div>
