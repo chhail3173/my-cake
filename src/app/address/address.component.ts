@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Toast, ToastrService } from 'ngx-toastr';
+import { deactivate } from '../authdeactivateguard.service';
 import { CommonserviceService } from '../commonservice.service';
 import { LoadingintercepterService } from '../loadingintercepter.service';
 
@@ -10,7 +11,7 @@ import { LoadingintercepterService } from '../loadingintercepter.service';
   templateUrl: './address.component.html',
   styleUrls: ['./address.component.css']
 })
-export class AddressComponent implements OnInit {
+export class AddressComponent implements deactivate {
   cakeid: any;
   checkoutDetails: any = {};
   checkoutCart: any = [];
@@ -27,6 +28,10 @@ export class AddressComponent implements OnInit {
     }
 
   ngOnInit(): void {
+  }
+
+  canDeactivate(){
+    return confirm("please check your fields carefully");
   }
 
   orderNow() {

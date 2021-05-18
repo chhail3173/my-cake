@@ -35,6 +35,9 @@ import { SummaryComponent } from './summary/summary.component';
 import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ConfirmorderComponent } from './confirmorder/confirmorder.component';
+import { AuthguardService } from './authguard.service';
+import { AuthdeactivateguardService } from './authdeactivateguard.service';
+
 
 
 
@@ -80,7 +83,7 @@ import { ConfirmorderComponent } from './confirmorder/confirmorder.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot() 
   ],
-  providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthinterceptService, multi:true}],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthinterceptService, multi:true}, AuthguardService, AuthdeactivateguardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,12 +10,7 @@ import { CommonserviceService } from "../commonservice.service";
   styleUrls: ["./checkout.component.css"],
 })
 export class CheckoutComponent implements OnInit {
-  // cakeid: any;
-  // checkoutDetails: any = {};
-  // checkoutCart: any = [];
-  // totalPrice: any;
-  // public showOverlay = true;
-  // ingrediants:any = [];
+
   constructor(
     private cs: CommonserviceService,
     private route: ActivatedRoute,
@@ -23,7 +18,7 @@ export class CheckoutComponent implements OnInit {
     private router: Router,
     private intercept: LoadingintercepterService
   ) {
-    // this.cartItems();
+   
   }
 
   ngOnInit(): void {}

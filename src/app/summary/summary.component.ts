@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonserviceService } from '../commonservice.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class SummaryComponent implements OnInit {
   cartItem: any = [];
   public showOverlay = true;
 
-  constructor(private cs: CommonserviceService,private http: HttpClient) {
+  constructor(private cs: CommonserviceService,private http: HttpClient, private router: Router) {
     this.cartItems();
    }
 
@@ -34,6 +35,7 @@ export class SummaryComponent implements OnInit {
   }
 
   confirm() {
+    this.router.navigate(['/checkout/address']);
     
   }
 

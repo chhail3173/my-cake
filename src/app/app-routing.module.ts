@@ -18,9 +18,11 @@ import { SummaryComponent } from './summary/summary.component';
 import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ConfirmorderComponent } from './confirmorder/confirmorder.component';
+import { AuthguardService } from './authguard.service';
+import { AuthdeactivateguardService } from './authdeactivateguard.service';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent, canActivate:[AuthguardService] },
   { path: '', component: HomeComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'forget', component: ForgetComponent },
@@ -28,7 +30,7 @@ const routes: Routes = [
   { path: 'cakedetails/:cakeid', component: CakedetailsComponent },
   { path: 'cart',component: CartComponent },
   
-  { path: 'checkout', children:[{ path: '', component: SummaryComponent }, {path: 'address', component: AddressComponent}, {path: 'payment', component: PaymentComponent}, {path: 'confirm', component: ConfirmorderComponent}], component: CheckoutComponent},
+  { path: 'checkout', children:[{ path: '', component: SummaryComponent }, {path: 'address', component: AddressComponent, canDeactivate:[AuthdeactivateguardService]}, {path: 'payment', component: PaymentComponent}, {path: 'confirm', component: ConfirmorderComponent}], component: CheckoutComponent},
   {path: 'loading', component: LoadingComponent},
   {path: 'admin', loadChildren:()=> import('./admin/admin.module').then(m => m.AdminModule)},
   {path: 'orders', component: OrdersComponent}

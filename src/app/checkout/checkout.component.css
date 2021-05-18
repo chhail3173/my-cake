@@ -1,34 +1,30 @@
-.container {
-    display: flex;
-    width: 100vw;
+.containers {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
     height: 100vh;
-}
-.summary {
-    position: fixed;
-    top: 15;
-    left: 0;
-    background-color: #adb5bd;
-    width: 10%;
-    height: 100%;
-    margin: 10px;
-}
-.summary a {
-    text-decoration: none;
-    margin: 5px;
-    padding: 5px;
-    
+
 }
 
-.outlet {
-    background-color: #adb5bd;
-    width: 100%;
+.summary {
+    background-color: #212529!important;
     height: 100%;
-    margin-left: 30px;
+
     border: none;
     box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
     border-radius: 4px;
+
 }
 
+.summary button {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    width: 90%;
+    margin: 5px;
+  
+}
 
-
+.outlet {
+background-color: #f8f9fa!important;
+}
 
